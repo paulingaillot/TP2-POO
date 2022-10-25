@@ -159,11 +159,14 @@ public class App {
                             Pigeontab[x] = this;
                             System.out.println("Je me deplace");
                         }
-                        else  {
+                        else if(direction > this.x && Pigeontab[x-1] == null) {
                             Pigeontab[x] = null;
                             this.x--;
                             Pigeontab[x] = this;
                             System.out.println("Je me deplace");
+                        }
+                        else {
+                            System.out.println("je suis bloqué :'(");
                         }
                         mafenetre.UpdatePigeon();
 
