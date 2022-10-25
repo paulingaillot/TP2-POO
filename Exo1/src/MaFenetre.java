@@ -22,7 +22,7 @@ public class MaFenetre implements ActionListener {
         try {
             JPanel panel = new JPanel();
             panel.setBounds(0, 0, 600, 550);
-            BufferedImage img = ImageIO.read(new File("./Exo1/src/fenetre.png"));
+            BufferedImage img = ImageIO.read(new File("./Exo1/src/ressources/fenetre.png"));
             JLabel pic = new JLabel(new ImageIcon(img));
             panel.add(pic);
             f.add(panel);
@@ -42,8 +42,8 @@ public class MaFenetre implements ActionListener {
             bouton[i].addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     int j = Integer.parseInt(e.getActionCommand());
-                    App.Nourrituretab[j] = new App.Nourriture(j);
-                    App.Nourrituretab[j].start();
+                    Nourriture.Nourrituretab[j] = new Nourriture(j);
+                    Nourriture.Nourrituretab[j].start();
                     System.out.println("Appui sur bouton");
                     UpdatePigeon();
                 }
@@ -63,23 +63,9 @@ public class MaFenetre implements ActionListener {
         System.out.println(Thread.currentThread() + " en fin de MaFenetre()");
     }
 
-    public void addBackGround() {
-        try {
-            JPanel panel = new JPanel();
-            panel.setBounds(0, 0, 600, 550);
-            BufferedImage img = ImageIO.read(new File("./Exo1/src/fenetre.png"));
-            JLabel pic = new JLabel(new ImageIcon(img));
-            panel.add(pic);
-            f.add(panel);
-            f.validate();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     public void UpdateFood() {
         for(int i=0; i<10; i++) {
-            if(App.Nourrituretab[i] != null) {
+            if(Nourriture.Nourrituretab[i] != null) {
 
                 try {
                     //f.removeAll();
@@ -87,7 +73,7 @@ public class MaFenetre implements ActionListener {
 
                     bouton[i].setForeground(new Color(100, 255, 255));
                     bouton[i].setBounds(100+(i+1)*35, 460, 30,30);
-                    Icon icon = new ImageIcon("./Exo1/src/graines.png");
+                    Icon icon = new ImageIcon("./Exo1/src/ressources/graines.png");
 
                     bouton[i].setIcon(icon);
                     bouton[i].setVisible(true);
@@ -108,7 +94,7 @@ public class MaFenetre implements ActionListener {
         f.getComponent(0).repaint();
         UpdateFood();
         for(int i=0; i<10; i++) {
-            if(App.Pigeontab[i] != null) {
+            if(Pigeon.Pigeontab[i] != null) {
 
                 try {
                     //f.removeAll();
@@ -116,7 +102,7 @@ public class MaFenetre implements ActionListener {
                     JPanel panel = new JPanel();
                     panel.setForeground(new Color(100, 255, 255));
                     panel.setBounds(100+(i+1)*35, 415, 30,30);
-                    BufferedImage img = ImageIO.read(new File("./Exo1/src/pigeon.png"));
+                    BufferedImage img = ImageIO.read(new File("./Exo1/src/ressources/pigeon.png"));
                     JLabel pic = new JLabel(new ImageIcon(img));
                     panel.add(pic);
                     f.add(panel).setForeground((new Color(255, 255, 255)));
@@ -133,7 +119,5 @@ public class MaFenetre implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        
     }
 }
