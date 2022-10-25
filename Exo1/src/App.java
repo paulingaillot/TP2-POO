@@ -3,8 +3,9 @@ public class App {
     static Nourriture[] Nourrituretab = new Nourriture[10];
     static Pigeon[] Pigeontab = new Pigeon[10];
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        System.out.println("Hello, World!"); // Le survivant
         
+
         /*Thread myThread2;
 		myThread2 = new Thread(new Pigeon(2));
 		myThread2.start();*/
@@ -22,6 +23,7 @@ public class App {
         Nourrituretab[9].start();
 
         mafenetre = new MaFenetre();
+        mafenetre.UpdatePigeon();
         
 
     }
@@ -40,7 +42,7 @@ public class App {
                 sleep(alea1);
                
                 new Pigeon(alea2).start();
-                mafenetre.addPigeon();
+                mafenetre.UpdatePigeon();
                 }catch(Exception e) {
 
                 }
@@ -61,6 +63,8 @@ public class App {
         }
 
         public void stopThread() {
+            Nourrituretab[x] = null;
+            mafenetre.UpdatePigeon();
             blinker = null;
         }
 
@@ -77,7 +81,7 @@ public class App {
                     sleep(1000);
                     if(isEat == true) {
                         this.stopThread();
-                        Nourrituretab[x] = null;
+                       
                     }
                     else {
                         this.valeur++;
@@ -110,6 +114,7 @@ public class App {
 
         public void stopThread() {
             Pigeontab[this.x] = null;
+            mafenetre.UpdatePigeon();
             blinker = null;
         }
 
@@ -148,6 +153,7 @@ public class App {
                             Nourrituretab[direction].delete();
                         }
                         else if(direction > this.x && Pigeontab[x+1] == null) {
+                            System.out.println("pos : "+x);
                             Pigeontab[x] = null;
                             this.x ++;
                             Pigeontab[x] = this;
@@ -159,7 +165,7 @@ public class App {
                             Pigeontab[x] = this;
                             System.out.println("Je me deplace");
                         }
-                        mafenetre.addPigeon();
+                        mafenetre.UpdatePigeon();
 
                     } else {
                         System.out.println("Je dors ...(pos="+this.x+")");
