@@ -1,9 +1,9 @@
 #Modularité
 
-from addition import addition
-from division import division
-from multiplication import multiplication
-from soustraction import soustraction
+from Calculatrice.addition import addition
+from Calculatrice.division import division
+from Calculatrice.multiplication import multiplication
+from Calculatrice.soustraction import soustraction
 
 # Polymorphisme
 
