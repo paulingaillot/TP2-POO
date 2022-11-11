@@ -13,7 +13,7 @@ class Animaux:
     pattes=0
 
     def seDeplacer(self):
-        print("Je me deplace")
+        pass
 
 
 class Chien(Animaux):
@@ -27,13 +27,13 @@ class Aigle(Animaux):
     pattes=2
 
     def seDeplacer(self):
-        print("Je vole")
+        print("Je vole !")
 
 class Requin(Animaux):
     pattes=0
 
     def seDeplacer(self):
-        print("Je nage")
+        print("Je nage !")
 
 
 # Généricité 
@@ -46,29 +46,30 @@ def calculator(a,b):
 def main():
 
     # Polymorphisme
+    print("Exemple Polymorphisme")
+    animal = Requin()
+    animal.seDeplacer()
 
-    r = Requin()
-    r.seDeplacer()
+    animal = Chien()
+    animal.seDeplacer()
 
-    c = Chien()
-    c.seDeplacer()
-
-    a = Aigle()
-    a.seDeplacer()
+    animal = Aigle()
+    animal.seDeplacer()
 
     # Généricité 
-
+    print("\nExemple Généricité")
     print(calculator(1,2))
     print(calculator(1.0,2))
     print(calculator(1.0,2.0))
     print(calculator("1","2"))
 
     #Modularité
-
+    print("\nExemple Modularité")
     print(addition(1,2))
     print(soustraction(3.5,"2"))
     print(multiplication(1.2,2.5))
     print(division("20.8","2.5"))
+
     print(sqrt(4))
     print(randint(1, 10))
 
