@@ -38,8 +38,8 @@ class Requin(Animaux):
 
 # Généricité 
 
-def calculator(a,b):
-    return int(a)+int(b)
+def add(a, b):
+    return a + b
 
 
 
@@ -58,10 +58,8 @@ def main():
 
     # Généricité 
     print("\nExemple Généricité")
-    print(calculator(1,2))
-    print(calculator(1.0,2))
-    print(calculator(1.0,2.0))
-    print(calculator("1","2"))
+    print(add("Bon", "jour"))
+    print(add(1, 2))
 
     #Modularité
     print("\nExemple Modularité")
