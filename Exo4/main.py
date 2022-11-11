@@ -2,10 +2,7 @@
 
 from math import sqrt
 from random import *
-from Calculatrice.addition import addition
-from Calculatrice.division import division
-from Calculatrice.multiplication import multiplication
-from Calculatrice.soustraction import soustraction
+from Calculatrice.addition import *
 
 # Polymorphisme
 
