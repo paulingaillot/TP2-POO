@@ -223,13 +223,13 @@ def compareMiles():
 
 def main():
     # ouverture en lecture du fichier csv
-    with open('Exo4/copd_1100_train.csv', 'r') as fichier:
+    with open('Exo4/traitement_donnees/copd_1100_train.csv', 'r') as fichier:
         # on crée un objet reader
         lecture = csv.reader(fichier, delimiter=',')
 
         # on transforme l'itérateur en liste
         listePatients = list(lecture)
-        
+
         #Patients = [Patient()]*len(listePatients)
         i = 0
         for patient in listePatients:
