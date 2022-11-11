@@ -1,14 +1,6 @@
 import csv
 
 
-def chercherLabel(listePatients, label):
-    cpt = 0
-    print("Voici la liste des patients de label " + str(label) + "\n")
-    for patient in listePatients:
-        cpt += 1
-        if patient[8] == label:
-            print("Patient n°" + str(cpt) + " : " + str(patient))
-
 
 class Patient:
     age = 0
@@ -21,22 +13,30 @@ class Patient:
     Miles = 0
     Label = 0
 
-    def haveLabel4(self):
-        if self.Label == 4:
+    def haveLabel(self, label):
+        if self.Label == label:
             return True
         else:
             return False
 
+listePatients = [Patient()]
 
-Patients = [Patient()]
+def chercherLabel(listePatients, label):
+    cpt = 0
+    print("Voici la liste des patients de label " + str(label) + "\n")
+    for patient in listePatients:
+        cpt += 1
+        if patient.haveLabel(label):
+            print("Patient n°" + str(cpt) + " : " + str(patient))
+
 
 
 def getAverageAge():
     moyenne = 0
     total = 0
     j = 0
-    for patient in Patients:
-        if patient.haveLabel4() == True:
+    for patient in listePatients:
+        if patient.haveLabel(4) == True:
             j = j+1
             total += patient.age
 
@@ -47,8 +47,8 @@ def getAverageAge():
 def getPartMen():
     homme = 0
     total = 0
-    for patient in Patients:
-        if patient.haveLabel4() == True:
+    for patient in listePatients:
+        if patient.haveLabel(4) == True:
             total = total + 1
             if patient.genre == 1:
                 homme = homme + 1
@@ -63,7 +63,7 @@ def getProbaType4() :
     label3 = 0
     label2 = 0
     label1 = 0
-    for patient in Patients:
+    for patient in listePatients:
         if patient.Label != 0 : 
             label1234 = label1234 + 1
             if patient.Label == 1 :
@@ -89,8 +89,8 @@ def compareYOS():
     tot1 = 0
     yos4 = 0
     tot4 = 0
-    for patient in Patients:
-        if patient.haveLabel4() == True:
+    for patient in listePatients:
+        if patient.haveLabel(4) == True:
             yos4 = yos4 + patient.yos
             tot4 = tot4+1
         elif patient.Label == 0:
@@ -111,8 +111,8 @@ def compareCPD():
     tot1 = 0
     cpd4 = 0
     tot4 = 0
-    for patient in Patients:
-        if patient.haveLabel4() == True:
+    for patient in listePatients:
+        if patient.haveLabel(4) == True:
             cpd4 = cpd4 + patient.cpd
             tot4 = tot4+1
         elif patient.Label == 0:
@@ -134,8 +134,8 @@ def compareAverageFEV():
     tot1 = 0
     fev4 = 0
     tot4 = 0
-    for patient in Patients:
-        if patient.haveLabel4() == True:
+    for patient in listePatients:
+        if patient.haveLabel(4) == True:
             fev4 = fev4 + patient.avg_FEV
             tot4 = tot4+1
         elif patient.Label == 0:
@@ -157,8 +157,8 @@ def compareFEV():
     tot1 = 0
     fev4 = 0
     tot4 = 0
-    for patient in Patients:
-        if patient.haveLabel4() == True:
+    for patient in listePatients:
+        if patient.haveLabel(4) == True:
             fev4 = fev4 + patient.FEV
             tot4 = tot4+1
         elif patient.Label == 0:
@@ -180,8 +180,8 @@ def compareOX2():
     tot1 = 0
     ox4 = 0
     tot4 = 0
-    for patient in Patients:
-        if patient.haveLabel4() == True:
+    for patient in listePatients:
+        if patient.haveLabel(4) == True:
             ox4 = ox4 + patient.OX2
             tot4 = tot4+1
         elif patient.Label == 0:
@@ -203,8 +203,8 @@ def compareMiles():
     tot1 = 0
     miles4 = 0
     tot4 = 0
-    for patient in Patients:
-        if patient.haveLabel4() == True:
+    for patient in listePatients:
+        if patient.haveLabel(4) == True:
             miles4 = miles4 + patient.Miles
             tot4 = tot4+1
         elif patient.Label == 0:
@@ -228,28 +228,28 @@ def main():
         lecture = csv.reader(fichier, delimiter=',')
 
         # on transforme l'itérateur en liste
-        listePatients = list(lecture)
+        liste = list(lecture)
 
-        #Patients = [Patient()]*len(listePatients)
+        # on crée une liste d'objets Patient
         i = 0
-        for patient in listePatients:
+        for patient in liste:
             if i == 0:
                 i = i+1
             else:
-                Patients.insert(i, Patient())
-                Patients[i].age = float(patient[0])
-                Patients[i].genre = float(patient[1])
-                Patients[i].yos = float(patient[2])
-                Patients[i].cpd = float(patient[3])
-                Patients[i].avg_FEV = float(patient[4])
-                Patients[i].FEV = float(patient[5])
-                Patients[i].OX2 = float(patient[6])
-                Patients[i].Miles = float(patient[7])
-                Patients[i].Label = float(patient[8])
+                listePatients.insert(i, Patient())
+                listePatients[i].age = float(patient[0])
+                listePatients[i].genre = float(patient[1])
+                listePatients[i].yos = float(patient[2])
+                listePatients[i].cpd = float(patient[3])
+                listePatients[i].avg_FEV = float(patient[4])
+                listePatients[i].FEV = float(patient[5])
+                listePatients[i].OX2 = float(patient[6])
+                listePatients[i].Miles = float(patient[7])
+                listePatients[i].Label = float(patient[8])
                 i = i+1
 
         
-        chercherLabel(listePatients, "4")
+        chercherLabel(listePatients, 4)
 
         print("\nInformations utiles\n")
 
