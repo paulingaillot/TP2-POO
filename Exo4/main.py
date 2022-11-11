@@ -1,11 +1,11 @@
 #Modularité
 
+from math import sqrt
+from random import *
 from Calculatrice.addition import addition
 from Calculatrice.division import division
 from Calculatrice.multiplication import multiplication
 from Calculatrice.soustraction import soustraction
-from math import sqrt
-from random import *
 
 # Polymorphisme
 
@@ -61,15 +61,16 @@ def main():
     print(add("Bon", "jour"))
     print(add(1, 2))
 
-    #Modularité
+    #Modularité1
+    print(sqrt(4))
+    print(randint(1, 10))
+
+    #Modularité2
     print("\nExemple Modularité")
     print(addition(1,2))
     print(soustraction(3.5,"2"))
     print(multiplication(1.2,2.5))
     print(division("20.8","2.5"))
-
-    print(sqrt(4))
-    print(randint(1, 10))
 
 if __name__ == "__main__":
     main()
