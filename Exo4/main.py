@@ -2,7 +2,7 @@
 
 from math import sqrt
 from random import *
-from Calculatrice.addition import *
+from fonctions_calcul import *
 
 # Polymorphisme
 
