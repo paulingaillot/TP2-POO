@@ -62,6 +62,7 @@ def main():
     print(add(1, 2))
 
     #Modularité1
+    print("\nExemple Modularité")
     print(sqrt(4))
     print(randint(1, 10))
 
