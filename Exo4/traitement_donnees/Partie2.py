@@ -226,9 +226,10 @@ def main():
     with open('Exo4/copd_1100_train.csv', 'r') as fichier:
         # on crée un objet reader
         lecture = csv.reader(fichier, delimiter=',')
-        # on transforme l'itérateur en liste
 
+        # on transforme l'itérateur en liste
         listePatients = list(lecture)
+        
         #Patients = [Patient()]*len(listePatients)
         i = 0
         for patient in listePatients:
