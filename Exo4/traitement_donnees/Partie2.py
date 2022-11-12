@@ -26,7 +26,6 @@ class Patient:
         self.Miles = float(patient[7])
         self.Label = int(patient[8])
            
-
     def __str__(self):
         return "[" + str(self.age) + ", " + str(self.genre) + ", "  + str(self.yos) + ", "  + str(self.cpd) + ", "  + str(self.avg_FEV) + ", "  + str(self.FEV) + ", "  + str(self.OX2) + ", "  + str(self.Miles) + ", "  + str(self.Label) + "]"
 
