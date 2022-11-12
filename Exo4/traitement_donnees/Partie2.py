@@ -18,6 +18,9 @@ class Patient:
             return True
         else:
             return False
+    
+    def __str__(self):
+        return "[" + str(self.age) + ", " + str(self.genre) + ", "  + str(self.yos) + ", "  + str(self.cpd) + ", "  + str(self.avg_FEV) + ", "  + str(self.FEV) + ", "  + str(self.OX2) + ", "  + str(self.Miles) + ", "  + str(self.Label) + "]"
 
 listePatients = [Patient()]
 
@@ -237,15 +240,15 @@ def main():
                 i = i+1
             else:
                 listePatients.insert(i, Patient())
-                listePatients[i].age = float(patient[0])
-                listePatients[i].genre = float(patient[1])
-                listePatients[i].yos = float(patient[2])
-                listePatients[i].cpd = float(patient[3])
+                listePatients[i].age = int(patient[0])
+                listePatients[i].genre = int(patient[1])
+                listePatients[i].yos = int(patient[2])
+                listePatients[i].cpd = int(patient[3])
                 listePatients[i].avg_FEV = float(patient[4])
                 listePatients[i].FEV = float(patient[5])
                 listePatients[i].OX2 = float(patient[6])
                 listePatients[i].Miles = float(patient[7])
-                listePatients[i].Label = float(patient[8])
+                listePatients[i].Label = int(patient[8])
                 i = i+1
 
         
