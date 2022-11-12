@@ -13,10 +13,7 @@ class Patient:
     Label = 0
 
     def haveLabel(self, label):
-        if self.Label == label:
-            return True
-        else:
-            return False
+        return self.Label == label
     
     def __init__ (self, patient):
         self.age = int(patient[0])
