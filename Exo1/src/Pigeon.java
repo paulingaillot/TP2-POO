@@ -35,6 +35,19 @@ public class Pigeon extends Thread{
                     }else {
                     sleep(1000);
                     
+                    // Le pigeon peut prendre peur 
+
+                    int aleapeur = 0 + (int)(Math.random() * ((25 - 0) + 1));
+                    if(aleapeur == 1) {
+                        // Le pigeon prend peur
+
+                        System.out.println("Le pigeon a pris peur");
+                        System.out.println("Suppression");
+                        this.stopThread();
+                    }
+
+                    // On verifei l'existence de nourriture
+
                     int min = -1;
                     int direction = -1;
                     for(int i=0; i<10; i++) {
@@ -44,7 +57,7 @@ public class Pigeon extends Thread{
                         }
                     }
 
-                    
+                    // Deplacement
 
                     if(direction != -1) {
 

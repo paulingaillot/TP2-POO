@@ -1,7 +1,5 @@
 public class Main {
     static MaFenetre mafenetre;
-    
-    
    
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!"); // Le survivant
@@ -36,7 +34,7 @@ public class Main {
                 try {
 
                 
-                int alea1 = 5000 + (int)(Math.random() * ((3000 - 500) + 1));
+                int alea1 = 5000 + (int)(Math.random() * ((3000 - 5000) + 1));
                 int alea2 = 0 + (int)(Math.random() * ((9 - 0) + 1));
 
                 sleep(alea1);
