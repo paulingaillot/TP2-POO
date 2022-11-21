@@ -17,6 +17,6 @@ Programme composé de deux parties :
 
 * Partie 1 (Exemple de concepts)
 ``python exemple_concept/main.py``
-<br>
+
 * Partie 2 (Traitement de données)
 ``python traitement_donnees/Partie2.py``
