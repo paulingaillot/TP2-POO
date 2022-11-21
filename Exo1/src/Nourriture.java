@@ -3,11 +3,14 @@ public class Nourriture extends Thread {
     private volatile Thread blinker;
 
     private int x;
-    private int valeur = 1;
-    private boolean isEat = false;
+    private int valeur ;
+    private boolean isEat;
 
     public Nourriture(int x) {
         this.x = x;
+        this.valeur = 1;
+        Nourrituretab[x] = this;
+        this.isEat = false;
     }
 
     public int getValeur() {
