@@ -4,7 +4,6 @@ public class Pigeon extends Thread {
 
 	private int x;
 	private boolean isEat;
-	private int peur;
 
 	public Pigeon(int x) {
 		this.x = x;
@@ -36,9 +35,9 @@ public class Pigeon extends Thread {
 
 					// Le pigeon peut prendre peur
 
-					if(peur < 95) Main.peur++; // La probabilité que les pigeons soient effrayés augmente
+					if(Main.peur < 95) Main.peur++; // La probabilité que les pigeons soient effrayés augmente
 					
-                    int aleapeur = 0 + (int)(Math.random() * (((100-this.peur) - 0) + 1));
+                    int aleapeur = 0 + (int)(Math.random() * (((100-Main.peur) - 0) + 1));
                     if(aleapeur == 1) {
 						Main.peur =0;
                         // Le pigeon prend peur

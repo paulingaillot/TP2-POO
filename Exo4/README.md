@@ -15,10 +15,8 @@ Programme composé de deux parties :
 
 ## Execution
 
-### Partie 1 (Exemple de concepts) :
-
+* Partie 1 (Exemple de concepts)
 ``python exemple_concept/main.py``
-
-### Partie 2 (Traitement de données) :
-
+<br>
+* Partie 2 (Traitement de données)
 ``python traitement_donnees/Partie2.py``
