@@ -1,6 +1,7 @@
 public class Main {
     static MaFenetre mafenetre;
-   
+    static int peur = 0; 
+    
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!"); // Le survivant
         
