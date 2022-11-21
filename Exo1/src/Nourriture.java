@@ -22,12 +22,13 @@ public class Nourriture extends Thread {
 
     public void start() {
         blinker = new Thread(this);
+        Main.mafenetre.UpdatePigeon();
         blinker.start();
     }
 
     public void run() {
         Thread thisThread = Thread.currentThread();
-
+        Main.mafenetre.UpdatePigeon();
         while (blinker == thisThread) {
             try {
                 sleep(1000);
@@ -41,7 +42,7 @@ public class Nourriture extends Thread {
                 }
 
             }catch(Exception e) {
-
+                e.printStackTrace();
             }
         }
     }

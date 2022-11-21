@@ -4,6 +4,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!"); // Le survivant
         
+        mafenetre = new MaFenetre();
+        mafenetre.UpdatePigeon();
 
         /*Thread myThread2;
 		myThread2 = new Thread(new Pigeon(2));
@@ -20,8 +22,7 @@ public class Main {
         Nourriture.Nourrituretab[9] = new Nourriture(9);
         Nourriture.Nourrituretab[9].start();
 
-        mafenetre = new MaFenetre();
-        mafenetre.UpdatePigeon();
+
         
 
     }
@@ -34,7 +35,7 @@ public class Main {
                 try {
 
                 
-                int alea1 = 5000 + (int)(Math.random() * ((3000 - 5000) + 1));
+                int alea1 = 15000 + (int)(Math.random() * ((5000 - 15000) + 1));
                 int alea2 = 0 + (int)(Math.random() * ((9 - 0) + 1));
 
                 sleep(alea1);
@@ -42,7 +43,7 @@ public class Main {
                 new Pigeon(alea2).start();
                 mafenetre.UpdatePigeon();
                 }catch(Exception e) {
-
+                    e.printStackTrace();
                 }
             }
         }
