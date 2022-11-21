@@ -110,7 +110,7 @@ def compareYOS():
             yos1 = yos1 + patient.yos
             tot1 = tot1 + 1
 
-    if tot1 > 0 & tot4 > 0:
+    if tot1 > 0 and tot4 > 0:
         moy1 = round(yos1 / tot1,2)
         moy4 = round(yos4 / tot4,2)
         value = "correct"
@@ -133,7 +133,7 @@ def compareCPD():
             cpd1 = cpd1 + patient.cpd
             tot1 = tot1 + 1
 
-    if tot1 > 0 & tot4 > 0:
+    if tot1 > 0 and tot4 > 0:
         moy1 = round(cpd1 / tot1,2)
         moy4 = round(cpd4 / tot4,2)
         value = "correct"
@@ -157,7 +157,7 @@ def compareAverageFEV():
             fev1 = fev1 + patient.avg_FEV
             tot1 = tot1 + 1
 
-    if tot1 > 0 & tot4 > 0:
+    if tot1 > 0 and tot4 > 0:
         moy1 = round(fev1 / tot1,2)
         moy4 = round(fev4 / tot4,2)
         value = "correct"
@@ -181,7 +181,7 @@ def compareFEV():
             fev1 = fev1 + patient.FEV
             tot1 = tot1 + 1
 
-    if tot1 > 0 & tot4 > 0:
+    if tot1 > 0 and tot4 > 0:
         moy1 = round(fev1 / tot1,2)
         moy4 = round(fev4 / tot4,2)
         value = "correct"
@@ -205,7 +205,7 @@ def compareOX2():
             ox1 = ox1 + patient.OX2
             tot1 = tot1 + 1
 
-    if tot1 > 0 & tot4 > 0:
+    if tot1 > 0 and tot4 > 0:
         moy1 = round(ox1 / tot1,2)
         moy4 = round(ox4 / tot4,2)
         value = "correct"
@@ -229,7 +229,7 @@ def compareMiles():
             miles1 = miles1 + patient.Miles
             tot1 = tot1 + 1
 
-    if tot1 > 0 & tot4 > 0:
+    if tot1 > 0 and tot4 > 0:
         moy1 = round(miles1 / tot1,2)
         moy4 = round(miles4 / tot4,2)
         value = "correct"
@@ -242,7 +242,7 @@ def compareMiles():
 
 def main():
     # ouverture en lecture du fichier csv
-    with open('Exo4/traitement_donnees/copd_1100_train.csv', 'r') as fichier:
+    with open('traitement_donnees/copd_1100_train.csv', 'r') as fichier:
         # on crée un objet reader
         lecture = csv.reader(fichier, delimiter=',')
 
