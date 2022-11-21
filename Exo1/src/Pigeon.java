@@ -39,9 +39,21 @@ public class Pigeon extends Thread {
                     if(aleapeur == 1) {
                         // Le pigeon prend peur
 
-                        System.out.println("Le pigeon a pris peur");
-                        System.out.println("Suppression");
-                        this.stopThread();
+                        System.out.println("Les pigeons ont pris peur");
+
+                        Pigeon[] Pigeontab2 = new Pigeon[10];
+                        for(int i=0; i<10; i++) {
+                            if(Pigeontab[i] != null) {
+                                int aleadeplacement = 0 + (int)(Math.random() * ((9 - 0) + 1));
+                                while(Pigeontab2[aleadeplacement] != null) {
+                                    aleadeplacement = 0 + (int)(Math.random() * ((9 - 0) + 1));
+                                }
+                                Pigeontab2[aleadeplacement] = Pigeontab[i];
+                                Pigeontab2[aleadeplacement].x = aleadeplacement;
+                            }
+                        }
+                        Pigeontab = Pigeontab2;
+                        Main.mafenetre.UpdatePigeon();
                     }
 
 					// On verifie l'existence de nourriture
