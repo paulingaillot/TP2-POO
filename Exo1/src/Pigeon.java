@@ -41,8 +41,7 @@ public class Pigeon extends Thread{
                     if(aleapeur == 1) {
                         // Le pigeon prend peur
 
-                        System.out.println("Le pigeon a pris peur");
-                        System.out.println("Suppression");
+                        System.out.println("Les pigeons ont pris peur");
                         this.stopThread();
                     }
 
