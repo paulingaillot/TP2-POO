@@ -10,10 +10,10 @@ Paulin GAILLOT - GAIP01040108
 
 Programme composé de deux parties :
 
-* Dans la première partie nous avons implémenter via des petits exemple le polymorphisme, la généricité ainsi que la modularité en Python.
-* Dans le second partie nouzs avons montrer l'interet du Python pour le traitement de données en etudiant les données sur une maladie pulmonaire (COPD).
+* Dans la première partie nous avons implémenter au travers d'exemple le polymorphisme, la généricité ainsi que la modularité en Python.
+* Dans la seconde partie nous avons montrer l'intérêt du Python pour le traitement de données, en prenant comme exemple un fichier de données sur une maladie pulmonaire (COPD).
 
-## Execution
+## Exécution
 
 * Partie 1 (Exemple de concepts)
 ``python exemple_concept/main.py``
