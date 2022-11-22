@@ -10,9 +10,9 @@ Paulin GAILLOT - GAIP01040108
 
 ## Description
 
-Le but de se programe est de générer une fenêtre. Sur le bord de cette fenêtre des pigeons vont se poser petit a petit. Nous pourront cliquer sur des boutons presents sous la fenêtre afin d'y ajouter de la nourriture pour que les pigeons puissent manger.
-Les pigeons votn toujours chercher a se deplacer vers la nourriture la plus fraiche.
-Il pourra arriver parfois que les pigeons prennent peur et se dispersent a des positions aleatoire sur la fenêtre.
+Le but de ce programme est de générer une fenêtre. Sur le bord de cette fenêtre des pigeons vont se poser petit à petit. Il est possible de cliquer sur des boutons présents sous celle-ci afin d'y ajouter de la nourriture.
+Les pigeons votn toujours chercher à se déplacer vers la nourriture la plus fraîche opur manger puis s'envoler.
+Il peut arriver que les pigeons prennent peur et se dispersent à des positions aléatoire sur la fenêtre.
 
 ## Prérequis
 
