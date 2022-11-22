@@ -20,4 +20,4 @@ Il pourra arriver parfois que les pigeons prennent peur et se dispersent a des p
 
 ## Execution
 
-``java -jar --enable-preview .\TP2.jar``
+``java -jar .\TP2.jar``
